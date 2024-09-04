@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin: 30px 0 20px 0;
+    font-size: 2em;
+}
+
+/* Form Container */
+#returnExchangeForm {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 15px rgba(255, 126, 95, 0.3);
+    outline: none;
+}
+
+/* Textarea */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7e5f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #604836;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+    display: none;
+    color: #d9534f;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+/* Additional Comments */
+#formResult {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+#container {
+    padding: 20px;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* White background with some transparency */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center the container */
+  }
+  
+  h1 {
+    background-color: #f46847;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 24px; /* Increase font size for better visibility */
+  }
+  
+  #formDetails {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Ensure the list items are displayed in a row with key and value on the same line */
+  #formDetails ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #formDetails li {
+      display: flex; /* Use flexbox to align items in a row */
+      justify-content: space-between; /* Space out the key and value */
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+    }
+    
+    #formDetails li .key {
+      font-weight: bold;
+      color: #f46847;
+    }
+    
+    #formDetails li .value {
+      text-align:left;
+    }
+    
+  
+  strong {
+    color: hsl(122, 39%, 49%);
+  }
+  
+  #link {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #485d49;
+    text-decoration: none;
+    border: 2px solid #a3e3a5;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #link:hover {
+    background-color: #97de9a;
+    text-align: center;
+    color: white;
+  }
+  
