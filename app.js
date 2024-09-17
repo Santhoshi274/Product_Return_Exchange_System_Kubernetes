@@ -12,7 +12,7 @@ app.use(cors()); //used to allow cors requests
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/returnExchangeDB', {
+mongoose.connect('mongodb://mongodb:27017/returnExchangeDB', {
 });
 
 const db = mongoose.connection;
@@ -70,7 +70,7 @@ app.get('/succesmessage', (req, res) => {
 });
 
 // Start the server
-const PORT = 3000;
+const PORT = 3005;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });

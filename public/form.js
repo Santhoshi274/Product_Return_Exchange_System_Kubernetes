@@ -20,7 +20,7 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
 
     const today = new Date();
     const selectedDate = new Date(orderDate);
-    if (selectedDate >= today) {
+    if (selectedDate >= today || selectedDate === "") {
       alert("Order date cannot be today or in the future.");
       hasError = true;
     }
@@ -61,7 +61,7 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
     };
 
     try {
-      const response = await fetch("http://localhost:3000/submit", {
+      const response = await fetch("http://localhost:3005/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
