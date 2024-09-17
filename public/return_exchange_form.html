@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return/Exchange Form</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <h2>PRODUCT RETURN | EXCHANGE SYSTEM</h2>
+    <form id="returnExchangeForm" action="/submit" method="POST">
+        <label for="orderNo">Order Number:</label>
+        <input type="text" id="orderNo" name="orderNo" required>
+        
+        <label for="orderDate">Order Date:</label>
+        <input type="date" id="orderDate" name="orderDate" required>
+        
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
+        
+        <label for="actionType">Action Type:</label>
+        <select id="actionType" name="actionType" required>
+            <option value="">Select</option>
+            <option value="Return">Return</option>
+            <option value="Exchange">Exchange</option>
+        </select>
+    
+        <div id="accountNumberSection" class="hidden">
+            <label for="accountNumber">Account Number for Return:</label>
+            <input type="text" id="accountNumber" name="accountNumber">
+        </div>
+        
+        <label for="reason">Reason:</label>
+        <select id="reason" name="reason" required>
+            <option value="">Select</option>
+            <option value="Damaged">Damaged</option>
+            <option value="Incorrect Item">Incorrect Item</option>
+            <option value="Not as Described">Not as Described</option>
+            <option value="Received the wrong item">Received the wrong item</option>
+            <option value="Size/fit issue">Size/fit issue</option>
+        </select>
+        
+        <label for="method">Return Method:</label>
+        <select id="method" name="method" required>
+            <option value="">Select</option>
+            <option value="Drop off at a store">Drop off at a store</option>
+            <option value="Schedule a courier pickup">Schedule a courier pickup</option>
+            <option value="Self-ship via a courier service">Self-ship via a courier service</option>
+        </select>
+        
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+        
+        <center><button type="submit">Submit</button></center>
+    </form>
+    <div id="formResult" class="hidden"></div>
+    <script src="form.js"></script>
+</body>
+</html>

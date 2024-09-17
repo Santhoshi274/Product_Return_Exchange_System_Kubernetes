@@ -1,60 +1,103 @@
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    background-image: url('images/img.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e2b0ff, #9d4edd); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center; /* Center text by default */
 }
 
+/* Headings */
 h2 {
-    text-align: center;
-    color: #333;
-    margin: 30px 0 20px 0;
-    font-size: 2em;
+  color: #fff; /* White color for better contrast on gradient background */
+  margin: 40px 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow for better readability */
+  
+}
+
+h1 {
+  background-color: #ff6f61; /* Bright header color */
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+  border-radius: 12px;
+  font-size: 2.5em; /* Larger font size for impact */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* Button Styles */
+button, .button, #link {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff6f61, #ff9a8b); /* Gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; /* For links styled as buttons */
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  font-size: 20px; /* Change to italic if needed */
+  font-weight: bold; /* Set text to bold */
+  text-transform: uppercase; /* Transform text to uppercase */
+}
+
+button:hover, .button:hover, #link:hover {
+  background: linear-gradient(45deg, #ff9a8b, #ff6f61); /* Reverse gradient on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  
+}
+
+/* Centering Buttons */
+button, .button, #link {
+  margin: 20px auto; /* Center buttons */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px; /* Change to italic if needed */
+  font-weight: bold; /* Set text to bold */
+  text-transform: uppercase; /* Transform text to uppercase */
 }
 
 /* Form Container */
-#returnExchangeForm {
-    width: 90%;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9); 
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+form {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  backdrop-filter: blur(12px); /* More pronounced blur effect */
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  background-color: #e6c6f8;
+  
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #333;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.form-group {
-    margin-bottom: 25px;
-}
-
-/* Input Fields */
+/* Form Inputs */
 input[type="text"],
 input[type="date"],
 input[type="tel"],
 select,
 textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-    background-color: #f9f9f9;
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fefefe; /* Slightly off-white background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 input[type="text"]:focus,
@@ -62,133 +105,138 @@ input[type="date"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-    border-color: #ff7e5f;
-    box-shadow: 0 0 15px rgba(255, 126, 95, 0.3);
-    outline: none;
+  border-color: #817877;
+  box-shadow: 0 0 12px rgba(178, 174, 174, 0.4);
+  outline: none;
+  
 }
 
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fefefe; /* Slightly off-white background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 /* Textarea */
 textarea {
-    height: 100px;
-    resize: vertical;
+  height: 140px; /* Increased height for better readability */
+  resize: vertical;
 }
 
 /* Hidden Elements */
 .hidden {
-    display: none;
-}
-
-/* Button Styles */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff7e5f;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #604836;
-    transform: scale(1.05);
+  display: none;
 }
 
 /* Error Message */
 .error-message {
-    display: none;
-    color: #d9534f;
-    font-size: 0.875em;
-    margin-top: 5px;
+  display: none;
+  color: #d9534f;
+  font-size: 0.875em;
+  margin-top: 5px;
 }
 
-/* Additional Comments */
+/* Form Result */
 #formResult {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #333;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
 }
 
-
-
+/* Container Styles */
 #container {
-    padding: 20px;
-    background: rgba(
-      255,
-      255,
-      255,
-      0.8
-    ); /* White background with some transparency */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    max-width: 800px; /* Limit the width for better readability */
-    margin: 20px auto; /* Center the container */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  max-width: 900px; /* Increased width for better layout */
+  margin: 20px auto; /* Center the container */
+  backdrop-filter: blur(8px); /* Slight blur effect for better contrast */
+  background: rgba(255, 255, 255, 0.8);
+  background-color: #e6c6f8;
+}
+
+/* Form Details */
+#formDetails {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#formDetails ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#formDetails li {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space out key and value */
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background-color: #f9f9f9;
+}
+
+#formDetails li .key {
+  font-weight: bold;
+  color: #ff6f61; /* Accent color */
+}
+
+#formDetails li .value {
+  text-align: left;
+}
+
+/* Strong Text */
+strong {
+  color: #28a745; /* Green color */
+}
+
+/* Link Styles */
+#link {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(45deg, #ff6f61, #ff9a8b); /* Gradient background */
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+#link:hover {
+  background: linear-gradient(45deg, #ff9a8b, #ff6f61); /* Reverse gradient on hover */
+  color: #fff;
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  button, .button, #link {
+      padding: 10px 15px;
+      font-size: 14px;
   }
-  
-  h1 {
-    background-color: #f46847;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    border-radius: 10px; /* Rounded corners */
-    font-size: 24px; /* Increase font size for better visibility */
+
+  form {
+      width: 95%;
+      padding: 20px;
   }
-  
-  #formDetails {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
+
+  #container {
+      padding: 20px;
   }
-  
-  /* Ensure the list items are displayed in a row with key and value on the same line */
-  #formDetails ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    #formDetails li {
-      display: flex; /* Use flexbox to align items in a row */
-      justify-content: space-between; /* Space out the key and value */
-      padding: 8px 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      background-color: #f9f9f9;
-    }
-    
-    #formDetails li .key {
-      font-weight: bold;
-      color: #f46847;
-    }
-    
-    #formDetails li .value {
-      text-align:left;
-    }
-    
-  
-  strong {
-    color: hsl(122, 39%, 49%);
-  }
-  
-  #link {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #485d49;
-    text-decoration: none;
-    border: 2px solid #a3e3a5;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  #link:hover {
-    background-color: #97de9a;
-    text-align: center;
-    color: white;
-  }
-  
+}
+
+p{
+  font-size: 23px;
+}

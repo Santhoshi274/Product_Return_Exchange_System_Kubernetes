@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Return/Exchange Form</title>
-    <link rel="stylesheet" href="styless.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Return/Exchange System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("images/image.png"); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .container {
+            background-color: #dadada;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%; /* Responsive width */
+            padding: 30px;
+            text-align: center; /* Center text inside the container */
+        }
+        h1 {
+            color: #f46847;
+            margin: 0 0 20px; /* Space below the heading */
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 20px; /* Space below the paragraph */
+        }
+        .buttons {
+            margin-top: 20px; /* Space above the buttons */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: rgb(237, 109, 109);
+            border: 2px solid #f46847;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #f46847;
+            color: white;
+        }
+        a {
+            text-decoration: none; /* Remove underline from links */
+            margin: 0 10px; /* Space between buttons */
+        }
+    </style>
 </head>
 <body>
-    <h2>PRODUCT RETURN | EXCHANGE SYSTEM</h2>
-    <form id="returnExchangeForm">
-        <label for="orderNo">Order Number:</label>
-        <input type="text" id="orderNo" name="orderNo">
-        
-        <label for="orderDate">Order Date:</label>
-        <input type="date" id="orderDate" name="orderDate">
-        
-        <label for="mobileNumber">Mobile Number:</label>
-        <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}">
-        
-        <label for="actionType">Action Type:</label>
-        <select id="actionType" name="actionType">
-            <option value="">Select</option>
-            <option value="Return">Return</option>
-            <option value="Exchange">Exchange</option>
-        </select>
-        
-        <div id="accountNumberSection" class="hidden">
-            <label for="accountNumber">Account Number for Return:</label>
-            <input type="text" id="accountNumber" name="accountNumber" >
+    <div class="container">
+        <h1>Product Return | Exchange System</h1>
+        <p>Welcome to our Return/Exchange System... Please log in or sign up to proceed.</p>
+        <div class="buttons">
+            <a href="login.html"><button>Login</button></a>
+            <a href="signup.html"><button>Signup</button></a>
         </div>
-        
-        <label for="reason">Reason:</label>
-        <select id="reason" name="reason">
-            <option value="">Select</option>
-            <option value="Damaged">Damaged</option>
-            <option value="Incorrect Item">Incorrect Item</option>
-            <option value="Not as Described">Not as Described</option>
-            <option value="Received the wrong item">Received the wrong item</option>
-            <option value="Size/fit issue">Size/fit issue</option>
-        </select>
-        
-        <label for="method">Return Method:</label>
-        <select id="method" name="method">
-            <option value="">Select</option>
-            <option value="Drop off at a store">Drop off at a store</option>
-            <option value="Schedule a courier pickup">Schedule a courier pickup</option>
-            <option value="Self-ship via a courier service">Self-ship via a courier service</option>
-        </select>
-        
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments"></textarea>
-        
-        <button type="submit">Submit</button>
-    </form>
-    <div id="formResult" class="hidden"></div>
-
-    <script src="form.js"></script>
+    </div>
 </body>
 </html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="container">
+        <h1>We Value Your Feedback</h1>
+        <form id="feedbackForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+            
+            <a href="feedback_success.html" class="button">Submit Feedback</a>
+        </form>
+        <div class="button-container">
+            <a href="index.html" class="button">Go Back</a>
+        </div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>

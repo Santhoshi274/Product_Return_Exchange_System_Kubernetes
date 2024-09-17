@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Received</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1><br>
+        <p>Your submission has been received successfully. We will process your request and get back to you soon.</p>
+        <div class="footer">
+            <p>If you have any questions, please feel free to contact us at support@gmail.com.</p>
+        </div><br>
+        <a href="index.html" class="button">Go Back</a>
+        <a href="feedback.html" class="button feedback-button">Give Feedback</a>
+    </div>
+    <script>
+        document.getElementById('link').addEventListener('click', function () {
+            localStorage.removeItem('formSubmissionData');
+        });
+    </script>
+</body>
+</html>

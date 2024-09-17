@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #529be4, #aecde2);
+    color: #333;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    
+    color: #070707;
+    padding: 30px;
+    
+   
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+/* Button Container */
+.buttons {
+    margin: 20px 0; /* Spacing around buttons container */
+}
+
+.buttons a {
+    margin: 0 10px; /* Space between buttons */
+    text-decoration: none;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f00; /* Orange */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65100; /* Darker Orange */
+}
+
+/* Form Styles */
+form {
+    display: inline-block;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+fieldset {
+    border: 2px solid #6a1b9a; /* Purple */
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #6a1b9a; /* Purple */
+    padding: 0 10px;
+    background-color: #fff;
+    border: none;
+}
+
+/* Input Styles */
+input {
+    margin: 10px 0;
+    padding: 12px;
+    width: calc(100% - 24px); /* Adjust width to fit padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #6a1b9a; /* Purple */
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,150 @@
+
+
+/* Glbal Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+button, a.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: #007bff;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+button:hover, a.button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Page-Specific Styles */
+body.index-body {
+    background-color: #f8f9fa;
+}
+
+body.form-body {
+    background-color: #e9ecef;
+}
+
+body.success-body {
+    background-color: #d4edda;
+}
+
+body.feedback-body {
+    background-color: #fff3cd;
+}
+
+body.feedback-success-body {
+    background-color: #d1ecf1;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 0.75em;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Rating Stars */
+.rating {
+    display: flex;
+    gap: 0.5em;
+}
+
+.star {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.star:hover, .star.selected {
+    color: gold;
+}
+
+/* Feedback Form Button Container */
+.button-container {
+    text-align: center;
+}
+
+a.feedback-button {
+    background-color: #17a2b8;
+}
+
+a.feedback-button:hover {
+    background-color: #138496;
+}
+
+/* Additional Styles for Success Page */
+#formDetails {
+    padding: 1em;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#container {
+    text-align: center;
+    padding: 2em;
+}
