@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nodejs-service
 spec:
-  type: LoadBalancer # Use ClusterIP or NodePort based on your requirements
+  type: LoadBalancer 
   ports:
     - port: 3005
       targetPort: 3005

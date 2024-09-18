@@ -10,7 +10,7 @@ services:
       - mynetwork1
     volumes:
       - mongo-data:/data/db
- 
+
   app:
     build:
       context: .
@@ -29,5 +29,3 @@ networks:
   mynetwork1:
     driver: bridge
  
-volumes:
-  mongo-data:
