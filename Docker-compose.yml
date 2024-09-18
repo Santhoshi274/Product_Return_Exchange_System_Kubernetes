@@ -9,7 +9,7 @@ services:
     networks:
       - mynetwork1
     volumes:
-      - mongo-data:/data/db
+      - mongo-data:/data/db # ./mongo-data:/data/db editied in server
 
   app:
     build:
