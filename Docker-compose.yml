@@ -28,4 +28,6 @@ services:
 networks:
   mynetwork1:
     driver: bridge
- 
+
+volumes:
+  mongo-data: 
