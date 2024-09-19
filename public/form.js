@@ -75,7 +75,7 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
 
       alert("Form submitted successfully!");
 
-      window.location.href = "success.html";
+      window.location.href = "/success.html";
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("An error occurred while submitting the form.");
