@@ -2,10 +2,14 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #e2b0ff, #9d4edd); /* Gradient background */
+  background-image: url("images/new3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
   color: #333;
-  text-align: center; /* Center text by default */
+  text-align: center;
+   /* Center text by default */
 }
 
 /* Headings */
@@ -23,7 +27,7 @@ h1 {
   padding: 20px;
   margin: 0;
   border-radius: 12px;
-  font-size: 2.5em; /* Larger font size for impact */
+  font-size: 2.0em; /* Larger font size for impact */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
 }
 
@@ -65,7 +69,7 @@ button, .button, #link {
 /* Form Container */
 form {
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 30px;
   background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
@@ -74,8 +78,9 @@ form {
   backdrop-filter: blur(12px); /* More pronounced blur effect */
   text-align: left;
   background: rgba(255, 255, 255, 0.8);
-  background-color: #e6c6f8;
+  background-color: #f4f1f5;
   
+
 }
 
 label {
@@ -147,19 +152,30 @@ textarea {
   font-size: 16px;
   color: #333;
 }
-
+#containers {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  max-width: 600px; /* Decreased width */
+  margin: 20px auto;
+  backdrop-filter: blur(8px);
+  background-color: #f3f0f4;
+  
+} 
 /* Container Styles */
 #container {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  border-radius: 20px; /* More rounded corners */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-  max-width: 900px; /* Increased width for better layout */
-  margin: 20px auto; /* Center the container */
-  backdrop-filter: blur(8px); /* Slight blur effect for better contrast */
-  background: rgba(255, 255, 255, 0.8);
-  background-color: #e6c6f8;
-}
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  max-width: 250px; /* Decreased width */
+  margin: 20px auto;
+  backdrop-filter: blur(8px);
+  background-color: #c7c3ca;
+  
+} 
+
 
 /* Form Details */
 #formDetails {
@@ -229,11 +245,11 @@ strong {
 
   form {
       width: 95%;
-      padding: 20px;
+      padding: 15px;
   }
 
   #container {
-      padding: 20px;
+      padding: 15px;
   }
 }
 

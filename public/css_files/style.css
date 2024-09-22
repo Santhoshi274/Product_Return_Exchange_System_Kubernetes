@@ -1,6 +1,8 @@
 /* Global Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("images/image.png");
+    background-repeat: no-repeat;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -10,16 +12,18 @@ body {
     width: 100%;
 }
 
+/* Header */
 header {
-    
-    color: #070707;
+    color: #151414;
     padding: 30px;
-    
-   
+    animation: fadeIn 1s ease;
 }
 
 h1 {
     margin-bottom: 10px;
+    animation: slideIn 0.5s ease forwards;
+    font-size: 2.5em; /* Increase font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 
 /* Button Container */
@@ -29,7 +33,6 @@ h1 {
 
 .buttons a {
     margin: 0 10px; /* Space between buttons */
-    text-decoration: none;
 }
 
 button {
@@ -37,14 +40,18 @@ button {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6f00; /* Orange */
-    color: white;
+    background-color: #8bef54; /* Orange */
+    color: rgb(5, 4, 4);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease forwards;
+    
 }
 
 button:hover {
-    background-color: #e65100; /* Darker Orange */
+    background-color: #78c868; /* Darker Orange */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Form Styles */
@@ -58,6 +65,7 @@ form {
     width: 100%;
     max-width: 400px;
     margin: 0 auto; /* Center the form horizontally */
+    animation: fadeIn 1s ease forwards;
 }
 
 fieldset {
@@ -66,6 +74,7 @@ fieldset {
     padding: 20px;
     margin: 0;
     padding-bottom: 0;
+    animation: slideIn 0.5s ease forwards;
 }
 
 legend {
@@ -84,6 +93,12 @@ input {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #6a1b9a;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.5);
 }
 
 /* Error Message */
@@ -92,6 +107,7 @@ input {
     font-size: 0.9em;
     margin-top: -10px;
     margin-bottom: 10px;
+    animation: shake 0.5s ease forwards;
 }
 
 /* Links */
@@ -102,4 +118,37 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
 }

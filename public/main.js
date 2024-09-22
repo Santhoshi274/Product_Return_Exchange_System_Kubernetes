@@ -68,3 +68,4 @@ function clearForm() {
 window.onload = function() {
     clearForm();
 };
+

@@ -4,12 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Return/Exchange Page</title>
-    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e2b0ff, #9d4edd); /* Gradient background */
+            background-image: url("css_files/images/image.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0px;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        h2 {
+            color: #260d0d; /* White color for contrast */
+            font-size: 2.5em; /* Increased font size */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            animation: fadeIn 1s; /* Animation effect */
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #0b0b0b;
+            font-size: 18px; /* Increased font size */
+            margin: 10px 0;
+            max-width: 600px; /* Added max width for better readability */
+            line-height: 1.5; /* Improved line spacing */
+            font-weight: bold;
+        }
+        #cont {
+            background-color: rgb(242, 228, 228);
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            padding: 12px 24px; /* Decreased padding */
+            background: linear-gradient(45deg, #ff6f61, #ff9a8b);
+            color: #fff;
+            border: none;
+            border-radius: 10px; /* Slightly smaller border radius */
+            cursor: pointer;
+            font-size: 1.1em; /* Decreased font size */
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reduced shadow for button */
+            animation: bounceIn 1s; /* Animation effect */
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #ff9a8b, #ff6f61); /* Reverse gradient on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
     <br><br>
-    <h2>Welcome!!! We're Excited to Make Your Return or Exchange Experience Smooth and Simple</h2><br>
-    <br>
-    <a href="return_exchange_form.html" class="button">PRODUCT RETURN | EXCHANGE</a>
+<div id="cont">
+    <h2>Welcome!!!</h2>
+    <p>We're excited to make your return or exchange experience smooth and simple.</p>
+    <p>Please click the button below to get started.</p>
+    <a href="return_exchange_form.html" class="button">PRODUCT RETURN | EXCHANGE</a><br><br>
+</div>
 </body>
 </html>
+
+

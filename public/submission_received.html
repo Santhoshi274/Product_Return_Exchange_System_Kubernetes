@@ -4,15 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submission Received</title>
-    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e2b0ff, #a94bf6);
+            margin: 0;
+            padding: 60px;
+            color: #333;
+            text-align: center;
+        }
+        /* Container Styles */
+        #container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            max-width: 400px; /* Increased width for better readability */
+            margin: 40px auto; /* Center container */
+            backdrop-filter: blur(8px);
+            background-color: #e6c6f8;
+        }
+
+        h1 {
+            color: #f65d4f; /* Accent color for the heading */
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #ff6f61, #ff9a8b);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px 0; /* Spacing between buttons */
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #ff9a8b, #ff6f61);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Thank You!</h1><br>
-        <p>Your submission has been received successfully. We will process your request and get back to you soon.</p>
+    <div id="container">
+        <h1>Thank You!</h1>
+        <p>Your submission has been received successfully. We will process your request and get back to you soon.</p><br>
         <div class="footer">
             <p>If you have any questions, please feel free to contact us at support@gmail.com.</p>
-        </div><br>
+        </div>
         <a href="index.html" class="button">Go Back</a>
         <a href="feedback.html" class="button feedback-button">Give Feedback</a>
     </div>

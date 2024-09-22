@@ -1,33 +1,34 @@
 version: '3.8'
- 
+
 services:
   mongodb:
     image: mongo:latest
-    container_name: mongo
+    container_name: return-exchange-system-mongo
     ports:
       - "27017:27017"
     networks:
       - mynetwork1
     volumes:
       - mongo-data:/data/db
- 
+
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: my-app
+    container_name: return-exchange-system
+    image: product-system
     ports:
-      - "3000:3000"
+      - "3007:3007"
     depends_on:
       - mongodb
     environment:
-      - MONGO_URL=mongodb://mongo:27017/returnExchangeDB
+      - MONGO_URL=mongodb://return-exchange-system-mongo:27017/returnExchangeDB
     networks:
       - mynetwork1
- 
+
 networks:
   mynetwork1:
     driver: bridge
- 
+
 volumes:
   mongo-data:

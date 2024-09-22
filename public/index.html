@@ -8,8 +8,8 @@
     <script src="main.js" defer></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url("images/image.png"); /* Replace with your image path */
+            font-family: 'Arial', sans-serif;
+            background-image: url("css_files/images/image.png"); /* Replace with your image path */
             background-size: cover; /* Ensure the image covers the entire background */
             background-position: center; /* Center the image */
             background-repeat: no-repeat;
@@ -19,28 +19,51 @@
             display: flex;
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
+            overflow: hidden; /* Prevent scroll */
         }
+
         .container {
-            background-color: #dadada;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgba(241, 233, 233, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             max-width: 600px;
             width: 90%; /* Responsive width */
-            padding: 30px;
+            padding: 40px;
             text-align: center; /* Center text inside the container */
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(-30px); /* Initial position */
+            animation: fadeInUp 0.5s forwards; /* Animation */
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h1 {
             color: #f46847;
             margin: 0 0 20px; /* Space below the heading */
+            font-size: 2.5em; /* Increase font size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
         }
+
         p {
             font-size: 18px;
             line-height: 1.6;
             margin: 0 0 20px; /* Space below the paragraph */
+            color: #555; /* Slightly darker text */
         }
+
         .buttons {
             margin-top: 20px; /* Space above the buttons */
         }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -49,15 +72,49 @@
             border: 2px solid #f46847;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            position: relative; /* For pseudo-element */
+            overflow: hidden; /* For ripple effect */
         }
+
+        button::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s;
+            z-index: 0; /* Behind text */
+        }
+
         button:hover {
             background-color: #f46847;
             color: white;
+            transform: translateY(-3px); /* Lift effect */
         }
+
+        button:hover::after {
+            transform: translate(-50%, -50%) scale(1); /* Ripple effect */
+        }
+
         a {
             text-decoration: none; /* Remove underline from links */
             margin: 0 10px; /* Space between buttons */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Reduce font size on small screens */
+            }
+
+            button {
+                padding: 10px 15px; /* Adjust button size */
+            }
         }
     </style>
 </head>

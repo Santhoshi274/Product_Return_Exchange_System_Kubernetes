@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css_files/style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <h1>Signup</h1>
+    <h1>Signup</h1><br>
     <form id="signupForm">
         <fieldset>
             <legend>Signup Form</legend>
@@ -17,8 +17,8 @@
             <input type="text" id="phone" placeholder="Phone Number" required><br>
             <input type="email" id="email" placeholder="Email ID" required><br>
             <input type="password" id="password" placeholder="Password" required><br>
-            <input type="password" id="rePassword" placeholder="Re-enter Password" required><br>
-            <button type="button" onclick="signUp()">Signup</button><br><br>
+            <input type="password" id="rePassword" placeholder="Re-enter Password" required><br><br>
+            <center><button type="button" onclick="signUp()">Signup</button><br><br></center>
             <div id="error-message" class="error-message"></div>
         </fieldset>
     </form>

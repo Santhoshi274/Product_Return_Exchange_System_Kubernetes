@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-return-exchange-deployment
+  labels:
+    app: product-return-exchange
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: product-return-exchange
+  template:
+    metadata:
+      labels:
+        app: product-return-exchange
+    spec:
+      containers:
+      - name: product-return-exchange-container
+        image: santhoshii/product_system:latest
+        ports:
+        - containerPort: 3007
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

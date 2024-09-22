@@ -12,10 +12,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'public'
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/returnExchangeDB', {
+mongoose.connect('mongodb://return-exchange-system-mongo:27017/returnExchangeDataBase', {
    
 });
-
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -42,51 +41,22 @@ app.post('/submit', async (req, res) => {
     try {
         const formData = req.body;
 
+        // Validate account number for returns
         if (formData.actionType === 'Return' && !formData.accountNumber) {
-            return res.status(400).json({ message: 'Account number is required for returns' });
+            return res.status(400).json({ message: 'Account number is required for returns.' });
         }
 
-        const newForm = new Form(formData);
+        // Save the form data (assuming you have a MongoDB or other DB setup)
+        const newForm = new Form(formData);  // Adjust as per your DB setup
         await newForm.save();
+
+        // Respond with success
         res.status(201).json({ message: 'Form submitted successfully', formData: newForm });
     } catch (error) {
-        console.error(error);
+        console.error("Error submitting form:", error);
         res.status(500).json({ message: 'Server error' });
     }
 });
-
-// // Serve static HTML files
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'login.html'));
-// });
-
-// app.get('/login.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'login.html'));
-// });
-
-// app.get('/signup.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'signup.html'));
-// });
-
-// app.get('/return_exchange_form.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'return_exchange_form.html'));
-// });
-
-// app.get('/submission_received.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'submission_received.html'));
-// });
-
-// app.get('/submission_success.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'submission_success.html'));
-// });
-
-// app.get('/feedback.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'feedback.html'));
-// });
-
-// app.get('/feedback_success.html', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'feedback_success.html'));
-// });
 
 // POST route for login (after user submits login form)
 app.post('/login', (req, res) => {
@@ -101,7 +71,7 @@ app.post('/signup', (req, res) => {
 });
 
 // Start the server
-const PORT = 3006;
+const PORT = 3007;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });

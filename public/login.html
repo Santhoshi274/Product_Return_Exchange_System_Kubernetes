@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css_files/style.css">
     <script src="main.js" defer></script>
-    
+    <style>
+        body {
+            background-image: url("css_files/images/new5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <br><br>
-    <h1>Login</h1>
+    <h1>Login</h1><br>
     <form id="loginForm">
         <fieldset>
             <legend>Login Form</legend>
             <input type="text" id="username" placeholder="Username" required><br>
-            <input type="password" id="password" placeholder="Password" required><br>
-            <button type="button" onclick="signIn()">Sign In</button><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            <center><button type="button" onclick="signIn()">Sign In</button><br><br></center>
             <div id="error-message" class="error-message"></div>
         </fieldset>
     </form>
 </body>
 </html>
+
