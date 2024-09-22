@@ -12,8 +12,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'public'
 
 // MongoDB connection
+<<<<<<< HEAD
 mongoose.connect('mongodb://return-exchange-system-mongo:27017/returnExchangeDataBase', {
    
+=======
+mongoose.connect('mongodb://mongodb:27017/returnExchangeDB', {
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
 });
 
 const db = mongoose.connection;
@@ -71,7 +75,11 @@ app.post('/signup', (req, res) => {
 });
 
 // Start the server
+<<<<<<< HEAD
 const PORT = 3007;
+=======
+const PORT = 3005;
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });

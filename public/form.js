@@ -21,12 +21,18 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
 
     const today = new Date();
     const selectedDate = new Date(orderDate);
+<<<<<<< HEAD
     if (selectedDate.toDateString() === today.toDateString()) {
         alert("Order date cannot be today.");
         hasError = true;
     } else if (selectedDate > today) {
         alert("Order date cannot be in the future.");
         hasError = true;
+=======
+    if (selectedDate >= today || selectedDate === "") {
+      alert("Order date cannot be today or in the future.");
+      hasError = true;
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
     }
 
     if (!/^\d{10}$/.test(mobileNumber)) {
@@ -65,6 +71,7 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
     };
 
     try {
+<<<<<<< HEAD
         const response = await fetch("/submit", {
             method: "POST",
             headers: {
@@ -81,6 +88,23 @@ document.getElementById("returnExchangeForm").addEventListener("submit", async f
         } else {
             alert(result.message || "An error occurred.");
         }
+=======
+      const response = await fetch("http://localhost:3005/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      localStorage.setItem("formSubmissionData", JSON.stringify(formData));
+
+      alert("Form submitted successfully!");
+
+      window.location.href = "/success.html";
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
     } catch (error) {
         console.error("Error submitting form:", error);
         alert("A server error occurred while submitting the form.");

@@ -1,20 +1,33 @@
 version: '3.8'
+<<<<<<< HEAD
 
 services:
   mongodb:
     image: mongo:latest
     container_name: return-exchange-system-mongo
+=======
+ 
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
     ports:
       - "27017:27017"
     networks:
       - mynetwork1
     volumes:
+<<<<<<< HEAD
       - mongo-data:/data/db
+=======
+      - mongo-data:/data/db # ./mongo-data:/data/db editied in server
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
 
   app:
     build:
       context: .
       dockerfile: Dockerfile
+<<<<<<< HEAD
     container_name: return-exchange-system
     image: product-system
     ports:
@@ -26,9 +39,25 @@ services:
     networks:
       - mynetwork1
 
+=======
+    container_name: return-exchange
+    ports:
+      - "3005:3005"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/returnExchangeDB
+    networks:
+      - mynetwork1
+ 
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
 networks:
   mynetwork1:
     driver: bridge
 
 volumes:
+<<<<<<< HEAD
   mongo-data:
+=======
+  mongo-data: 
+>>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
