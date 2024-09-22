@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Use the official Node.js image from the Docker Hub
 FROM node:18
 
@@ -19,12 +18,3 @@ EXPOSE 3007
 
 # Command to run the app
 CMD ["node", "app.js"]
-=======
-FROM node:18
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3005
-CMD ["node", "app.js"]
->>>>>>> 324aeb2a1969e0c5053aed1237a1043944599c47
